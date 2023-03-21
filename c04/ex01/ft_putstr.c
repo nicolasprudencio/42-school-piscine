@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 18:05:46 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/03/19 18:14:17 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/03/21 17:28:47 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,4 @@ void	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
-}
-
-int	main(void)
-{
-	char	str[] = "oi estou aqui";
-
-	ft_putstr(str);
-	return (0);
 }

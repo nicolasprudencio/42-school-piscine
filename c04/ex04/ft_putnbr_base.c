@@ -6,12 +6,11 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 18:04:43 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/03/21 00:58:31 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/03/21 17:36:28 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -28,13 +27,46 @@ int	ft_baselen(char *str)
 	return (i);
 }
 
-void	ft_putnbr(int nb, char *base)
+int	base_validate(char *base)
+{
+	int	i;
+	int	j;
+	int	base_len;
+
+	i = 0;
+	j = 0;
+	base_len = ft_baselen(base);
+	if (base_len <= 1)
+		return (1);
+	while (base[i])
+	{	
+		if (base[i] == '+' || base[i] == '-' || base[i] == ' ')
+		{
+			return (1);
+		}
+		j = i + 1;
+		while (base[j])
+		{
+			if (base[i] == base[j])
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
+}
+
+int	ft_putnbr(int nb, char *base)
 {
 	long int	nbr;
 	int			base_type;
+	int			validate;
 
 	nbr = nb;
 	base_type = ft_baselen(base);
+	validate = base_validate(base);
+	if (validate == 1)
+		return (0);
 	if (nbr < 0)
 	{
 		nbr *= -1;
@@ -46,6 +78,7 @@ void	ft_putnbr(int nb, char *base)
 	}
 	nbr = nbr % base_type;
 	ft_putchar(base[nbr]);
+	return (0);
 }
 
 void	ft_putnbr_base(int nbr, char *base)
@@ -53,10 +86,5 @@ void	ft_putnbr_base(int nbr, char *base)
 	ft_putnbr(nbr, base);
 }
 
-int	main(void)
-{
-	ft_putnbr_base(25, "ab");
-	return (0);
-}
-
-// os números de caracteres na variável base, determina qual é o tipo de pase que estaremos utilizando
+/* os números de caracteres na variável base, 
+determina qual é o tipo de base que estaremos utilizando */

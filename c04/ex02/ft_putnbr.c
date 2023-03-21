@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:57:38 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/03/20 18:40:28 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/03/21 03:43:48 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,4 @@ void	ft_putnbr(int nb)
 	}
 	nbr = nbr % 10 + '0';
 	ft_putchar(nbr);
-}
-
-int	main(void)
-{
-	ft_putnbr(234);
-	return (0);
 }

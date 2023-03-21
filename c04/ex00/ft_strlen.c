@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 17:54:52 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/03/19 18:09:24 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/03/21 03:39:02 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ int	ft_strlen(char	*str)
 	}
 	return (i);
 }
-
-// int	main(void)
-// {
-// 	char	str[] = "12345678";
-
-// 	printf("%d", ft_strlen(str));
-// 	return (0);
-// }
