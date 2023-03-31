@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 18:03:17 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/03/19 15:54:11 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/03/22 19:19:31 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,12 @@ char	*ft_strstr(char *str, char *to_find)
 		i++;
 	}
 	return (0);
+}
+
+#include<stdio.h>
+int	main(void)
+{
+	char str[] = "2021 Benguerir pisciune teste Khouribga";
+	char find[] = "piscine";
+	printf("%s", ft_strstr(str, find));
 }

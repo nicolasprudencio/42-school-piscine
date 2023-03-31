@@ -35,3 +35,18 @@ void	ft_rev_int_tab(int *tab, int size)
 		f--;
 	}
 }
+
+int main(void)
+{
+	int	arr[] = {1,2,3,4,5,6};
+	int i;
+	
+	i = 0;
+	ft_rev_int_tab(arr, 6);
+	while (i < 6)
+	{
+		printf("%d", arr[i]);
+	}
+
+	return (0);
+}

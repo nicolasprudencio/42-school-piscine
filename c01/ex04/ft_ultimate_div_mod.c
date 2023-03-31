@@ -21,9 +21,7 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	d = *b;
 	*a = c / d;
 	*b = c % d;
-	c = *a;
-	d = *b;
-	printf("%d\n%d", c, d);
+	printf("%d\n%d", *a, *b);
 }
 
 int	main(void)

@@ -29,16 +29,16 @@ void	ft_sort_int_tab(int *tab, int size)
 	i = 0;
 	while(i < size)
 	{
-		i++;
 		x = i + 1;
 		while (x < size)
 		{
-			x++;
 			if(tab[i] > tab[x])
 			{
 				ft_swap(tab, i, x);
 			}
+			x++;
 		}
+		i++;
 	}
 }
 

@@ -34,7 +34,6 @@ int	base_validate(char *base)
 	int	base_len;
 
 	i = 0;
-	j = 0;
 	base_len = ft_baselen(base);
 	if (base_len <= 1)
 		return (1);

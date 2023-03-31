@@ -6,8 +6,24 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 18:22:41 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/03/21 18:22:41 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/03/23 02:22:04 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sqrt(int nb);
+int	ft_sqrt(int nb)
+{
+	int	i;
+
+	if (nb <= 0)
+		return (0);
+	if (nb == 1)
+		return (1);
+	i = 1;
+	while (i <= nb / 2 && i < 46341)
+	{
+		if (i * i == nb)
+			return (i);
+		i++;
+	}
+	return (0);
+}

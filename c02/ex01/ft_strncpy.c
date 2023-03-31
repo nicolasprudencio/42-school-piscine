@@ -27,3 +27,14 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+
+#include <stdio.h>
+
+int main(void)
+{
+	char str[] = "novo teste";
+	char str2[] = "meu novo teste amigo";
+
+	printf("%s\n", ft_strncpy(str, str2, 19));
+	return (0);
+}

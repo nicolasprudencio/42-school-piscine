@@ -23,3 +23,16 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+
+#include <stdio.h>
+
+int main(void)
+{
+	char	str1[] = "teste";
+	char	str2[] = "tastememo";
+
+	printf("%s\n", str1);
+	ft_strcpy(str1, str2);
+	printf("%s\n", str2);
+	return (0);
+}

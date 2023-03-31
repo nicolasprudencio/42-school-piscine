@@ -1,1 +1,0 @@
-cc -Wextra -Wall -Werror *.c && ./a.out
